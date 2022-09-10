@@ -10,11 +10,19 @@ const Engineer = require('./lib/engineer');
 const fs = require("fs");
 const path = require("path");
 // directory files
-// const OUTPUT_DIR = path.resolve(__dirname, "output");
+ const OUTPUT_DIR = path.resolve(__dirname, "output");
 // const outputPath = path.join(OUTPUT_DIR, "team.html");
 // array to hold team members
 const teamMembers = [];
 
+
+
+// ============================
+
+
+
+
+// initial prompt
 const promptManager = () => {
     return inquirer.prompt(
         [
@@ -55,6 +63,14 @@ const promptManager = () => {
     })
 };
 
+
+
+// ============================
+
+
+
+// once the manager info is pushed to the array, the default prompt menu is called
+// this menu will be called at the end of every prompt
 const promptMenu = () => {
     return inquirer.prompt(
         [
@@ -80,6 +96,13 @@ const promptMenu = () => {
     });
 }
 
+
+
+// ============================
+
+
+
+// prompt for the engineer option
 const promptEngineer = () => {
     console.log(`
     ===============
@@ -124,6 +147,13 @@ const promptEngineer = () => {
     })
 };
 
+
+
+// ============================
+
+
+
+// prompt for the intern option
 const promptIntern = () => {
     console.log(`
     ===============
@@ -167,4 +197,34 @@ const promptIntern = () => {
         promptMenu();
     })
         
+};
+
+
+
+// ============================
+
+
+
+// function to build a team based on the user input
+const buildTeam = () => {
+    console.log(`
+    ===============
+    Finished building the team!
+    ===============
+    `);
+
+    // create the output directory if the output path doesn't exist
+    if (!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR)
+    }
+    fs.writeFileSync(outputPath, generateSite(teamMembers), "utf-8");
 }
+
+
+
+// ============================
+
+
+
+// calling the promptManager() function on load
+promptManager();
