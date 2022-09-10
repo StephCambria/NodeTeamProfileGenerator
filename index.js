@@ -116,5 +116,55 @@ const promptEngineer = () => {
                 validate: (value) => { if (value) {return true} else {return 'Please enter a value to continue'}},
             }
         ]
-    )
+    ).then(answers => {
+        console.log(answers);
+        const engineer = new Engineer(answers.name, answers.employeeId, answers.email, answers.githubUsername);
+        teamMembers.push(engineer);
+        promptMenu();
+    })
+};
+
+const promptIntern = () => {
+    console.log(`
+    ===============
+    Add a New Engineer
+    ===============
+    `);
+
+    return inquirer.prompt(
+        [
+            {
+                type: 'input',
+                name: 'name',
+                message: 'What is the name of the intern?',
+                validate: (value) => { if (value) {return true} else {return 'Please enter a value to continue'}},
+            },
+            {
+                type: 'input',
+                name: 'employeeId',
+                message: 'Enter their employee ID',
+                // validate property to check if the user provided a value
+                validate: (value) => { if (value) {return true} else {return 'Please enter a value to continue'}},
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: 'Enter their email',
+                // validate property to check if the user provided a value
+                validate: (value) => { if (value) {return true} else {return 'Please enter a value to continue'}},
+            },
+            {
+                type: 'input',
+                name: 'school',
+                message: 'Enter their school name',
+                validate: (value) => { if (value) {return true} else {return 'Please enter a value to continue'}},
+            }
+        ]
+    ).then(answers => {
+        console.log(answers);
+        const intern = new Intern(answers.name, answers.employeeId, answers.email, answers.school);
+        teamMembers.push(intern);
+        promptMenu();
+    })
+        
 }
