@@ -79,3 +79,42 @@ const promptMenu = () => {
         }
     });
 }
+
+const promptEngineer = () => {
+    console.log(`
+    ===============
+    Add a New Engineer
+    ===============
+    `);
+
+    return inquirer.prompt(
+        [
+            {
+                type: 'input',
+                name: 'name',
+                message: 'What is the name of the engineer?',
+                validate: (value) => { if (value) {return true} else {return 'Please enter a value to continue'}},
+            },
+            {
+                type: 'input',
+                name: 'employeeId',
+                message: 'Enter their employee ID',
+                // validate property to check if the user provided a value
+                validate: (value) => { if (value) {return true} else {return 'Please enter a value to continue'}},
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: 'Enter their email',
+                // validate property to check if the user provided a value
+                validate: (value) => { if (value) {return true} else {return 'Please enter a value to continue'}},
+            },
+            {
+                type: 'input',
+                name: 'githubUsername',
+                message: 'Enter their Github username',
+                validate: (value) => { if (value) {return true} else {return 'Please enter a value to continue'}},
+            }
+        ]
+    )
+}
