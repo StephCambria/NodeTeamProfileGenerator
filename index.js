@@ -21,8 +21,61 @@ const promptManager = () => {
             {
                 type: 'input',
                 name: 'name',
-                message: 'What is your name?'
+                message: 'What is your name?',
+                // validate property to check if the user provided a value
+                validate: (value) => { if (value) {return true} else {return 'Please enter a value to continue'}},
+            },
+            {
+                type: 'input',
+                name: 'employeeId',
+                message: 'Enter your employee ID',
+                // validate property to check if the user provided a value
+                validate: (value) => { if (value) {return true} else {return 'Please enter a value to continue'}},
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: 'Enter your email address',
+                // validate property to check if the user provided a value
+                validate: (value) => { if (value) {return true} else {return 'Please enter a value to continue'}},
+            },
+            {
+                type: 'input',
+                name: 'officeNumber',
+                message: 'Enter your office number',
+                // validate property to check if the user provided a value
+                validate: (value) => { if (value) {return true} else {return 'Please enter a value to continue'}},
+            },
+        ]
+    ).then(answers => {
+        console.log(answers);
+        const manager = new Manager(answers.name, answers.employeeId, answers.email, answers.officeNumber);
+        teamMembers.push(manager);
+        promptMenu();
+    })
+};
+
+const promptMenu = () => {
+    return inquirer.prompt(
+        [
+            {
+                type: 'list',
+                name: 'menu',
+                message: 'Please select which option you would like to continue with:',
+                choices: ['add an engineer', 'add an intern', 'finish building my team'],
             }
         ]
     )
+    .then(userChoice => {
+        switch (userChoice.menu) {
+            case "add an engineer":
+                promptEngineer();
+                break;
+            case "add an intern":
+                promptIntern();
+                break;
+            default:
+                buildTeam();
+        }
+    });
 }
