@@ -1,5 +1,5 @@
 // const Intern = require('../lib/intern');
-// const intern = new Intern('Elliot', '091394', 'ereynolds@fakemail.com', 'Blaina');
+// const intern = new Intern('elliot', '091394', 'ereynolds@fakemail.com', 'blaina');
 
 // repeat the testing cycle from employee.test.js!
 
@@ -7,7 +7,7 @@
 //      expect(intern.name).toBe('elliot');
 //      expect(intern.id).toBe('091394');
 //      expect(intern.email).toBe('ereynolds@fakemail.com');
-//      expect(intern.school).toBe('Blaina');
+//      expect(intern.school).toBe('blaina');
 // });
 
 
@@ -26,7 +26,7 @@
 // });
 
 // test('test if we can get the school location from the getSchool() method', () => {
-//      expect(intern.getSchool()).toBe('Blaina');
+//      expect(intern.getSchool()).toBe('blaina');
 // });
 
 
