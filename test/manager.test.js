@@ -12,7 +12,7 @@ test("test if we can get the constructor values for the employee object", () => 
   expect(manager.name).toBe("stephanie");
   expect(manager.id).toBe("082994");
   expect(manager.email).toBe("scambria@fakemail.com");
-  expect(manager.officeNumber).toBe("280");
+  expect(manager.officeNumber).toBe("290");
 });
 
 test("test if we can get the name from the getName() method", () => {
@@ -28,7 +28,7 @@ test("test if we can get the email from the getEmail() method", () => {
 });
 
 test("test if we can get the office number from the getOfficeNumber() method", () => {
-  expect(manager.getOfficeNumber()).toBe("280");
+  expect(manager.getOfficeNumber()).toBe("290");
 });
 
 test("test if we can get the role from the getRole() method", () => {
