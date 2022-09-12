@@ -157,7 +157,7 @@ const promptEngineer = () => {
 const promptIntern = () => {
     console.log(`
     ===============
-    Add a New Engineer
+    Add a New Intern
     ===============
     `);
 
