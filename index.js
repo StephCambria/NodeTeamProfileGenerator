@@ -1,7 +1,7 @@
 // using inquirer@8.2.4
 const inquirer = require('inquirer');
 // importing lib files
-// const Employee = require('./lib/employee');
+// const Employee = require('./lib/employee'); <- Technically I don't need to initialize this one since all of my other lib files expand upon it
 const Manager = require('./lib/manager');
 const Intern = require('./lib/intern');
 const Engineer = require('./lib/engineer');
