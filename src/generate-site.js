@@ -19,7 +19,7 @@ const generateTeam = (team) => {
           Manager
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">ID: ${manager.employeeId}</li>
+          <li class="list-group-item">ID: ${manager.id}</li>
           <li class="list-group-item">
             Email:
             <span id="email"
@@ -47,7 +47,7 @@ const generateTeam = (team) => {
           Engineer
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">ID: ${engineer.employeeId}</li>
+          <li class="list-group-item">ID: ${engineer.id}</li>
           <li class="list-group-item">
             Email:
             <span id="email"
@@ -80,7 +80,7 @@ const generateTeam = (team) => {
           Intern
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">ID: ${intern.employeeId}</li>
+          <li class="list-group-item">ID: ${intern.id}</li>
           <li class="list-group-item">
             Email:
             <span id="email"
