@@ -37,11 +37,13 @@ main {
   color: #ffffff;
   background-color: #6a84a0;
   border-radius: 1rem;
-
   font-size: 1.1rem;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
 }
 
 i {
+    font-family: 'Nunito Sans', sans-serif;
     color:#fee2e3;
     margin-right: 10px;
 }
