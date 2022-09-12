@@ -52,7 +52,119 @@ return html.join(' ');
 
 // export function to generate entire page
 module.exports = team => {
-    return ` `;
+    return `<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://kit.fontawesome.com/1e0a13a89f.js"
+          crossorigin="anonymous"
+        ></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap"
+          rel="stylesheet"
+        />
+        <link href="../dist/style.css" rel="stylesheet" />
+    
+    
+       <!-- ================================================================ -->
+       <!-- This serves as the template for the generated HTML file -->
+       <!-- The information in the cards will be dynamically updated based on user input -->
+    
+        <title>Team Profile Generator</title>
+      </head>
+      <body>
+        <header>
+          <h1>Team Profile Generator</h1>
+        </header>
+    
+        <!-- ================================================================ -->
+        <!-- Using Bootstrap as the foundation to save time -->
+        <main>
+          <div class="card" style="width: 18rem">
+            <div class="card-header">
+              ${manager.name} <br />
+              <i class="fas fa-mug-hot"></i>
+              Manager
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">ID: ${manager.employeeId}</li>
+              <li class="list-group-item">
+                Email:
+                <span id="email"
+                  ><a href="mailto:${manager.email}"
+                    >${manager.email}</a
+                  ></span
+                >
+              </li>
+              <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
+            </ul>
+          </div>
+    
+          <!-- ================================================================ -->
+    
+          <div class="card" style="width: 18rem">
+            <div class="card-header">
+              ${engineer.name} <br />
+              <i class="fas fa-glasses"></i>
+              Engineer
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">ID: ${engineer.employeeId}</li>
+              <li class="list-group-item">
+                Email:
+                <span id="email"
+                  ><a href="mailto:${engineer.email}"
+                    >${engineer.email}</a
+                  ></span
+                >
+              </li>
+              <li class="list-group-item">
+                Github Username:
+                <a target="_blank" href="https://github.com/${engineer.githubUsername}"
+                  >${engineer.githubUsername}</a
+                >
+              </li>
+            </ul>
+          </div>
+    
+          <!-- ================================================================ -->
+          <div class="card" style="width: 18rem">
+            <div class="card-header">
+              ${intern.name} <br />
+              <i class="fas fa-user-graduate"></i>
+              Intern
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">ID: ${intern.employeeId}</li>
+              <li class="list-group-item">
+                Email:
+                <span id="email"
+                  ><a href="mailto:${intern.email}"
+                    >${intern.email}</a
+                  ></span
+                >
+              </li>
+              <li class="list-group-item">School: ${intern.school}</li>
+            </ul>
+          </div>
+        </main>
+    
+        <!-- ================================================================ -->
+      </body>
+    </html>
+     `;
 }
 
 // ` ` should contain html syntax with ${}
