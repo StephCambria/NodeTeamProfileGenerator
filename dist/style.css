@@ -1,0 +1,68 @@
+body {
+  background-image: url("https://source.unsplash.com/featured/1800x1400?office");
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  position: absolute;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  font-size: 4em;
+  margin: 2rem;
+  padding: 1.5rem;
+  margin-bottom: 60vh;
+  border-bottom: 1.5px solid;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px;
+  padding: 10px;
+}
+
+.card {
+  padding: 10px;
+  margin: 15px;
+  border-radius: 1rem;
+}
+
+.card-header {
+  color: #ffffff;
+  background-color: #6a84a0;
+  border-radius: 1rem;
+
+  font-size: 1.1rem;
+}
+
+i {
+    color:#fee2e3;
+    margin-right: 10px;
+}
+
+.list-group {
+  color: #715f65;
+}
+
+/* MAKE IT ALL ON ONE LINE AND SMALLER */
+.list-group-item {
+  white-space: nowrap;
+  overflow: visible;
+}
+
+a {
+  color: #8498af;
+}
+
+a:hover {
+  color: #bfb9cf;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+}
