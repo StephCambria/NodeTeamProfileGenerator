@@ -1,3 +1,5 @@
+/* Using Unsplash's free API to generate the background images */
+
 body {
   background-image: url("https://source.unsplash.com/featured/1800x1400?office");
   display: flex;
@@ -52,7 +54,7 @@ i {
   color: #715f65;
 }
 
-/* MAKE IT ALL ON ONE LINE AND SMALLER */
+/* This puts all of the cards inline and smaller */
 .list-group-item {
   white-space: nowrap;
   overflow: visible;
