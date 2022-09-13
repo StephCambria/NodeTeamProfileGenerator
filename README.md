@@ -1,6 +1,8 @@
 # Team Profile Generator with Node.js, Inquirer, and Jest
 ![License Badge](https://shields.io/badge/license-ISC-green)
 
+<img width="1679" alt="sample1" src="https://user-images.githubusercontent.com/107421370/189795722-6b231465-1c0c-423f-bb43-7a731d06bd22.png">
+
 
 
 ## Table of Contents
@@ -31,7 +33,8 @@ You can contribute to this project by submitting bugs via [ISSUES](https://githu
 ## Tests
 All tests were run with [Jest](https://jestjs.io/docs/getting-started).
 
-<img width="753" alt="test-pass" src="https://user-images.githubusercontent.com/107421370/189754568-98b6112d-3f30-4616-bff7-18bd2b685b2a.png">
+<img width="753" alt="test-pass" src="https://user-images.githubusercontent.com/107421370/189795350-1a35bcf0-884a-42aa-b8e9-a80b6b6c882f.png">
+
 
 ## License
 This application is licensed under the ISC license.
