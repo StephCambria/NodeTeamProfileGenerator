@@ -47,7 +47,7 @@ main {
 i {
     font-family: 'Nunito Sans', sans-serif;
     color:#fee2e3;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .list-group {
@@ -57,7 +57,7 @@ i {
 /* This puts all of the cards inline and smaller */
 .list-group-item {
   white-space: nowrap;
-  overflow: visible;
+  overflow:visible;
 }
 
 a {
